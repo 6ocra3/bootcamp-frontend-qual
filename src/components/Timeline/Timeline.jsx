@@ -1,13 +1,13 @@
 import React from 'react'
 import s from "./timeline.module.scss"
-import firstPortfolio from "./../static/img/first-portfolio.png"
-import pizza from "./../static/img/PIZZA.png"
-import sbor from "./../static/img/SBOR.png"
-import myResume from "./../static/img/my-resume.png"
-import sferum from "./../static/img/sferum.jpg"
-import atmosferum from "./../static/img/atmosferum.png"
-import whattime from "./../static/img/whattime.png"
-import Carousel, { CarouselChild } from './Carousel'
+import firstPortfolio from "./../../static/img/first-portfolio.png"
+import pizza from "./../../static/img/PIZZA.png"
+import sbor from "./../../static/img/SBOR.png"
+import myResume from "./../../static/img/my-resume.png"
+import sferum from "./../../static/img/sferum.jpg"
+import atmosferum from "./../../static/img/atmosferum.png"
+import whattime from "./../../static/img/whattime.png"
+import Carousel, { CarouselChild } from '../Carousel/Carousel'
 
 export default function Timeline() {
   return (

@@ -1,6 +1,6 @@
 import s from "./index.module.scss"
-import Timeline from "./components/Timeline";
-import Bio from "./components/Bio";
+import Timeline from "./components/Timeline/Timeline.jsx";
+import Bio from "./components/Bio/Bio.jsx";
 function App() {
   console.log(s)
   return (

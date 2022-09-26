@@ -1,11 +1,11 @@
 import React from 'react'
 import s from "./bio.module.scss"
-import avatar from "./../static/img/avatar.JPG"
-import github from "./../static/img/github.png"
-import vk from "./../static/img/vk.png"
-import telegram from "./../static/img/telegram.png"
-import mail from "./../static/img/mail.png"
-import Link from './Link'
+import avatar from "./../../static/img/avatar.JPG"
+import github from "./../../static/img/github.png"
+import vk from "./../../static/img/vk.png"
+import telegram from "./../../static/img/telegram.png"
+import mail from "./../../static/img/mail.png"
+import Link from '../Link/Link'
 export default function Bio() {
   return (
     <div className={s.bioContent}>

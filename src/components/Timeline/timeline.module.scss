@@ -208,7 +208,7 @@ li {
   &::after {
     content: " ";
     display: inline-block;
-    background-image: url("./../static/img/finger.png");
+    background-image: url("./../../static/img/finger.png");
     background-size: 35px;
     background-repeat: no-repeat;
     height: 35px;
@@ -225,7 +225,7 @@ li {
   &:last-of-type::after {
     content: " ";
     display: inline-block;
-    background-image: url("./../static/img/finger.png");
+    background-image: url("./../../static/img/finger.png");
     background-size: 35px;
     background-repeat: no-repeat;
     height: 35px;

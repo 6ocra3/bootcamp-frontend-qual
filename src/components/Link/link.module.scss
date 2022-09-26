@@ -1,0 +1,51 @@
+.infoSpan {
+    display: flex;
+}
+
+
+.icon {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.imgIcon {
+    height: 20px;
+    width: 20px;
+    margin: 5px 0;
+}
+
+
+.link {
+    margin-left: 0;
+    font-size: 19px;
+    line-height: 25px;
+    font-weight: 500;
+    color: #dfcdcd;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
+    .icon {
+        order: 2;
+    }
+
+    .link {
+        margin-right: 7.5px;
+        margin-left: auto;
+        order: 1;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .link {
+        font-size: 3.3vw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .link {
+        font-size: 4vw;
+    }
+}
