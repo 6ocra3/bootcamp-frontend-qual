@@ -1,0 +1,72 @@
+// Высота у .carousel и у .carousel-item должны быть одинаковые, иначе не будет работать проценты у .buttons
+
+.button {
+  font-weight: 600;
+  height: 2.25rem;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  transition-duration: 0.2s;
+  justify-content: center;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.buttonGhost {
+    color: #004ffc;
+    background: transparent;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:hover:not(:disabled) {
+      color: #004ffc;
+      background: transparent;
+    }
+
+    &:disabled {
+      color: #919ca3;
+      background: transparent;
+    }
+  }
+}
+
+
+.carousel {
+  cursor: pointer;
+  overflow: hidden;
+  height: 80%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+  height: 100%;
+  z-index: 5;
+}
+
+.carouselItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0);
+  height: 100%;
+  color: black;
+}
+
+.buttons {
+  transform: translate(0, -100%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

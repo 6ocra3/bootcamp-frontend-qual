@@ -1,0 +1,365 @@
+/* Variables */
+
+$font-title: 'Saira', sans-serif;
+$font-text: 'Chivo', sans-serif;
+$background: #252827;
+
+$color-primary: #004ffc;
+$color-light: white;
+$color-dim: #6c6d6d;
+$spacing: 50px;
+$radius: 4px;
+
+$date: 120px;
+$dotborder: 4px;
+$dot: 11px;
+$line: 3px;
+
+
+
+.timelineContent {
+  text-align: center;
+  justify-content: center;
+  background-color: #252827;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+p {
+
+  text-align: justify;
+  font-weight: 300;
+}
+
+
+strong {
+  font-weight: 600;
+}
+
+h1 {
+  font-family: $font-title;
+  letter-spacing: 1.5px;
+  color: $color-light;
+  font-weight: 400;
+  font-size: 2.4em;
+}
+
+#timeline-content {
+  margin-top: $spacing;
+  text-align: center;
+}
+
+/* Timeline */
+
+.timeline {
+  border-left: $line solid $color-primary;
+  // border-top: $line solid $color-primary;
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: $font-text;
+  margin: $spacing 10vw;
+  letter-spacing: 0.5px;
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  padding: 50px 0 0 0;
+  list-style: none;
+  font-weight: 100;
+  max-width: 600px;
+  width: fit-content;
+  min-width: 250px;
+
+  h1 {
+    font-family: $font-title;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+    font-size: 1.4em;
+  }
+
+  h2,
+  h3 {
+    font-family: $font-title;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    font-size: 1.6em;
+    margin-bottom: 0.7em;
+    text-align: left;
+  }
+}
+
+.event {
+  vertical-align: middle;
+  padding-bottom: ($spacing * 0.5);
+  margin-bottom: $spacing;
+  position: relative;
+  height: 100%;
+
+  &:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+    top: 0;
+  }
+
+  &:before {
+    left: ((($date * 0.6) + $line + $dot + ($dotborder * 2)) * 1.5) * -1;
+    color: rgba(255, 255, 255, 0.4);
+    content: attr(data-date);
+    text-align: right;
+    font-weight: 100;
+    font-size: 0.9em;
+    min-width: $date;
+    font-family: $font-title;
+  }
+
+  &:after {
+    box-shadow: 0 0 0 $dotborder rgba(0, 79, 252, 1);
+    background: lighten($background, 5%);
+    border-radius: 50%;
+    height: $dot;
+    width: $dot;
+    content: "";
+    top: 5px;
+  }
+}
+
+li {
+  padding: 0 50px 50px 50px;
+}
+
+.info,
+.attachment {
+  height: 100%;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.attachment {
+  display: flex;
+  align-items: center;
+}
+
+.aboutMe p {
+  padding: $spacing;
+
+  &:first-of-type {
+    padding-top: 5px;
+    padding-bottom: 0;
+  }
+
+  &:last-child {
+    padding-top: 5px;
+  }
+}
+
+.aboutMe h3 {
+  padding-top: 20px;
+  padding-left: $spacing;
+  text-align: left;
+}
+
+.aboutMe {
+  font-family: $font-text;
+  letter-spacing: 0.5px;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  font-weight: 100;
+  border-left: $line solid $color-primary;
+  border-top: $line solid $color-primary;
+  border-top-left-radius: $radius;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.8);
+  margin: 50px 10vw 0 10vw;
+  max-width: 600px;
+  width: fit-content;
+  min-width: 250px;
+}
+
+.divLi {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-bottom: ($spacing * 0.5);
+  margin-bottom: $spacing;
+  height: 350px;
+
+  &:first-of-type {
+    padding-top: 20px;
+  }
+
+  &:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  &::after {
+    content: " ";
+    display: inline-block;
+    background-image: url("./../static/img/finger.png");
+    background-size: 35px;
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: -40px;
+    right: -40%
+  }
+
+  &:first-of-type::after {
+    display: none;
+  }
+
+  &:last-of-type::after {
+    content: " ";
+    display: inline-block;
+    background-image: url("./../static/img/finger.png");
+    background-size: 35px;
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: -60px;
+    right: -40%
+  }
+}
+
+.info {
+  opacity: 1;
+  height: auto;
+}
+
+.attachment {
+  transition: opacity 2s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.divLi:hover .info {
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.divLi:hover .attachment {
+  opacity: 1;
+  height: 100%;
+}
+
+
+.portfolio {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.sferum {
+  width: 55%;
+  margin: 0 auto;
+  display: block;
+}
+
+
+@media screen and (min-width: 1200px) {
+  .event::after {
+    left: -6px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .divLi {
+    padding-bottom: 10px;
+    margin-bottom: 75px;
+
+    &:first-of-type {
+      padding-top: 20px;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border: none;
+    }
+  }
+
+  .event::before {
+    top: -55px;
+    right: 25px
+  }
+
+  .event::after {
+    top: -44px;
+    right: -6px;
+  }
+
+  .timeline {
+    border-left: none;
+    border-radius: 0;
+    border-right: $line solid $color-primary;
+    border-bottom-left-radius: $radius;
+    border-top-left-radius: $radius;
+    margin: $spacing 1vw;
+  }
+
+  .aboutMe {
+    border-right: $line solid $color-primary;
+    border-left: 0;
+    border-top-right-radius: $radius;
+    border-top-left-radius: 0;
+    margin: $spacing 1vw;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .timeline {
+    margin: $spacing auto;
+    text-align: justify;
+    font-size: 21px;
+    width: 90vw;
+  }
+
+  .aboutMe {
+    margin: $spacing auto;
+    text-align: justify;
+    font-size: 21px;
+    width: 90vw;
+  }
+
+  .divLi::after {
+    right: -80%
+  }
+
+  .divLi:last-of-type:after {
+    right: -80%
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .divLi {
+    height: 70vw
+  }
+
+  .timeline,
+  .aboutMe {
+    font-size: 4vw;
+  }
+
+  li {
+    padding: 0 20px 20px 20px;
+  }
+}
